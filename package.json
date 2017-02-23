@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Kazooooo/FrontendDevelopmentStarter.git",
-  "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
-  },
   "author": "KazumasaToda <cest93@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -25,8 +22,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
     "webpack": "^2.2.1"
   }
 }
