@@ -1,1 +1,2 @@
-console.log('Hello Front-end Development!');
+const hello = 'Hello';
+console.log(`${hello}, Front-end Development!`);
