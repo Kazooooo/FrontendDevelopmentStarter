@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= data.sitename %><%= (page.title) ? ' | ' + page.title : '' %></title>
+<%- (data.description) ? '  <meta name="description" content="' + data.description + '">\n' : '' -%>
+<%- (data.keywords) ? '  <meta name="keywords" content="' + data.keywords + '">\n' : '' -%>
+<%- (data.ogTitle) ? '  <meta property="og:title" content="' + data.ogTitle + '">\n' : '' -%>
+<%- (data.ogDescription) ? '  <meta property="og:description" content="' + data.ogDescription + '">\n' : '' -%>
+<%- (data.ogSite_name) ? '  <meta property="og:site_name" content="' + data.ogSite_name + '">\n' : '' -%>
+<%- (data.ogImage) ? '  <meta property="og:image" content="' + data.ogImage + '">\n' : '' -%>
+<%- (data.ogUrl) ? '  <meta property="og:url" content="' + data.ogUrl + '">\n' : '' -%>
+<%- (data.fbAdmins) ? '  <meta property="fb:admins" content="' + data.fbAdmins + '">\n' : '' -%>
+<%- (data.ogUrl) ? '  <link rel="canonical" href="' + data.ogUrl + '">\n' : '' -%>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="<%= page.pathToRoot %>css/style.css">
+</head>
+<body>
+<div>Front-end Development Starter</div>
+<script src="<%= page.pathToRoot %>js/bundle.js"></script>
+</body>
+</html>

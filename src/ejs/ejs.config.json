@@ -1,0 +1,22 @@
+{
+  "data": {
+    "sitename": "My Website",
+    "pageTitle": "",
+    "description": "",
+    "keywords": "",
+    "homeURL": "",
+    "ogTitle": "",
+    "ogDescription": "",
+    "ogSite_name": "",
+    "ogImage": "",
+    "ogUrl": "",
+    "fbAdmins": ""
+  },
+  "pages": [
+    {
+      "id": "index",
+      "title": "HOME",
+      "pathToRoot": "./"
+    }
+  ]
+}
