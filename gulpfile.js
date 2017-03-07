@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const fs = require('fs');
 const plumber = require('gulp-plumber');
@@ -22,8 +20,8 @@ gulp.task('ejs', () => {
         data,
         page,
       }))
-      .pipe(rename('index.html'))
-      .pipe(gulp.dest('./dist/'))
+      .pipe(rename(`${page.filename}.html`))
+      .pipe(gulp.dest(`./dist/${page.dest}`))
       .pipe(browserSync.reload({ stream: true }));
   });
 });
@@ -60,6 +58,6 @@ const RUNNING_TASKS = [
 ];
 
 gulp.task('default', RUNNING_TASKS, () => {
-  gulp.watch(['./src/**/*.ejs', './src/ejs/**/*.json'], ['ejs']);
-  gulp.watch(['./src/**/*.scss'], ['sass']);
+  gulp.watch(['./src/ejs/**/*.ejs', './src/ejs/**/*.json'], ['ejs']);
+  gulp.watch(['./src/scss/**/*.scss'], ['sass']);
 });

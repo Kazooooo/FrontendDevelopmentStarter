@@ -15,8 +15,17 @@
   "pages": [
     {
       "id": "index",
+      "filename": "index",
+      "dest": "",
       "title": "HOME",
       "pathToRoot": "./"
+    },
+    {
+      "id": "sub",
+      "filename": "index",
+      "dest": "sub",
+      "title": "SUB",
+      "pathToRoot": "../"
     }
   ]
 }
