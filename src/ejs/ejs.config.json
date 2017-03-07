@@ -1,0 +1,31 @@
+{
+  "data": {
+    "sitename": "My Website",
+    "pageTitle": "",
+    "description": "",
+    "keywords": "",
+    "homeURL": "",
+    "ogTitle": "",
+    "ogDescription": "",
+    "ogSite_name": "",
+    "ogImage": "",
+    "ogUrl": "",
+    "fbAdmins": ""
+  },
+  "pages": [
+    {
+      "id": "index",
+      "filename": "index",
+      "dest": "",
+      "title": "HOME",
+      "pathToRoot": "./"
+    },
+    {
+      "id": "sub",
+      "filename": "index",
+      "dest": "sub",
+      "title": "SUB",
+      "pathToRoot": "../"
+    }
+  ]
+}
