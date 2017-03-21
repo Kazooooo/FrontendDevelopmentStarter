@@ -5,7 +5,11 @@
   "repository": "https://github.com/Kazooooo/FrontendDevelopmentStarter.git",
   "author": "KazumasaToda <cest93@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "deploy": "webpack -p"
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.24.0",

@@ -1,26 +1,19 @@
 const path = require('path');
 
 module.exports = {
-  entry: [
-    './src/js/entry.js',
-  ],
+  entry: './src/js/entry.js',
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
+    rules: [
       {
+        use: 'babel-loader',
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'stage-1'],
-        },
       },
     ],
   },
   devtool: 'source-map',
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
 };
