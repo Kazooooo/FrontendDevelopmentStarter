@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   entry: './src/js/entry.js',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.join(__dirname, 'dist/js'),
+    filename: (process.env.NODE_ENV === 'production') ? 'bundle.min.js' : 'bundle.dev.js',
   },
   module: {
     rules: [
@@ -15,5 +15,5 @@ module.exports = {
       },
     ],
   },
-  devtool: 'source-map',
+  devtool: (process.env.NODE_ENV === 'production') ? false : 'source-map',
 };

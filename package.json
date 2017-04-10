@@ -6,9 +6,9 @@
   "author": "KazumasaToda <cest93@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "watch": "webpack --watch",
     "build": "webpack",
-    "deploy": "webpack -p"
+    "watch": "webpack --watch",
+    "deploy": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
     "babel": "^6.23.0",
