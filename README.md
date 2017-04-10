@@ -20,9 +20,13 @@ gulp
 
 ## Build bundle.js using Webpack
 ```
-webpack
+npm run build
 ```
 watching task
 ```
-webpack --watch
+npm run watch
+```
+deploy without sourcemaps and creating minified files
+```
+npm run deploy
 ```
