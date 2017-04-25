@@ -50,7 +50,7 @@ gulp.task('sass', () => {
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: './',
+      baseDir: './dist/',
     },
   });
 });
