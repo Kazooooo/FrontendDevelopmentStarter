@@ -7,6 +7,9 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config');
 
 gulp.task('ejs', () => {
   const config = JSON.parse(fs.readFileSync('./src/ejs/ejs.config.json'));
@@ -47,6 +50,11 @@ gulp.task('sass', () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('webpack', () => {
+  webpackStream(webpackConfig, webpack)
+    .pipe(gulp.dest('./dist/js'));
+});
+
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
@@ -58,10 +66,12 @@ gulp.task('browser-sync', () => {
 const RUNNING_TASKS = [
   'ejs',
   'sass',
+  'webpack',
   'browser-sync',
 ];
 
 gulp.task('default', RUNNING_TASKS, () => {
+  gulp.watch(['./src/js/**/*.js'], ['webpack']);
   gulp.watch(['./src/ejs/**/*.ejs', './src/ejs/**/*.json'], ['ejs']);
   gulp.watch(['./src/scss/**/*.scss'], ['sass']);
 });
