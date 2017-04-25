@@ -33,12 +33,16 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: 'expanded',
     }).on('error', sass.logError))
+    .pipe(sourcemaps.write({
+      includeContent: false,
+    }))
+    .pipe(sourcemaps.init({
+      loadMaps: true,
+    }))
     .pipe(autoprefixer({
       browsers: ['last 3 version', 'ie >= 6', 'Android 4.0'],
     }))
-    .pipe(sourcemaps.write('./dist/css/', {
-      includeContent: false,
-    }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.reload({ stream: true }));
 });
