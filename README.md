@@ -6,27 +6,24 @@ npm 3.10.9 (yarn v0.17.9)
 
 ## Install dependency
 ```
+yarn install
+```
+If you use npm
+```
 npm install
 ```
-If you want to use yarn
+
+## Watching JS SCSS and EJS Compiling
 ```
-yarn
+yarn run gulp
 ```
 
-## Watching scss and ejs Compiling
+## Build only JS files using Webpack
 ```
-gulp
+yarn run build
 ```
 
-## Build bundle.js using Webpack
-```
-npm run build
-```
-watching task
-```
-npm run watch
-```
 deploy without sourcemaps and creating minified files
 ```
-npm run deploy
+yarn run deploy
 ```
