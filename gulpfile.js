@@ -51,8 +51,11 @@ gulp.task('sass', () => {
 });
 
 gulp.task('webpack', () => {
-  webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest('./dist/js'));
+  gulp.src('./src/js/entry.js')
+    .pipe(plumber())
+    .pipe(webpackStream(webpackConfig, webpack))
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('browser-sync', () => {
